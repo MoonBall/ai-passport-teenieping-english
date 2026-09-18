@@ -1,0 +1,324 @@
+[
+  {
+    "id": "name",
+    "scene": "基础问候与自我介绍",
+    "title": "爱心萌可",
+    "command": "What's your name?",
+    "meaning": "你叫什么名字？",
+    "short": [
+      "What's your name?"
+    ],
+    "response": "My name is... / I am...",
+    "answer": [
+      "My name is Heartsping.",
+      "I am Heartsping."
+    ],
+    "response_zh": "说出自己的名字。可以说，My name is，加上你的名字；也可以说，I am，加上你的名字。听一个例子。",
+    "usage": "第一次见面，老师或新朋友想知道你的名字时。",
+    "action": "指向对方询问，再指向自己胸前做自我介绍。",
+    "lesson_title": "询问姓名",
+    "character_id": "heartsping"
+  },
+  {
+    "id": "feeling",
+    "scene": "基础问候与自我介绍",
+    "title": "银光萌可",
+    "command": "How are you?",
+    "meaning": "你好吗？",
+    "short": [
+      "How are you?"
+    ],
+    "response": "I'm good / happy / fine.\nThank you!",
+    "answer": [
+      "I'm happy. Thank you!",
+      "I'm fine. Thank you!"
+    ],
+    "response_zh": "告诉对方你现在的感受。状态不错可以说，I'm good；开心可以说，I'm happy；很好可以说，I'm fine。最后说，谢谢。",
+    "usage": "开始上课或见面打招呼时。",
+    "action": "轻轻点头，双手贴胸表达开心，给出大拇指。",
+    "lesson_title": "日常问候",
+    "character_id": "shimmerping"
+  },
+  {
+    "id": "age",
+    "scene": "基础问候与自我介绍",
+    "title": "星光萌可",
+    "command": "How old are you?",
+    "meaning": "你几岁了？",
+    "short": [
+      "How old are you?"
+    ],
+    "response": "I'm ... years old.",
+    "answer": [
+      "I'm five years old.",
+      "Five."
+    ],
+    "response_zh": "说出自己的年龄。用，I'm，加数字，再加，years old。也可以直接回答数字。下面用五岁举例，你要换成自己的实际年龄。",
+    "usage": "老师或新朋友询问你的年龄时。",
+    "action": "指向自己，再张开一只手的五根手指表示五岁；回答时换成自己的年龄。",
+    "lesson_title": "询问年龄",
+    "character_id": "sparkleping"
+  },
+  {
+    "id": "listen",
+    "scene": "课堂互动指令",
+    "title": "月光萌可",
+    "command": "Listen. / Look at me.",
+    "meaning": "请听。／看着我。",
+    "short": [
+      "Listen.",
+      "Look at me."
+    ],
+    "response": "保持专注，看向老师或屏幕",
+    "answer": [],
+    "response_zh": "停下手里的事情，认真听；听到，看着我，就看向老师或屏幕。一般不用口头回答，用动作回应就可以。",
+    "usage": "老师需要吸引注意力，准备讲解新内容时。",
+    "action": "先把手放到耳旁示意听，再指眼睛并指向自己示意看这里。",
+    "lesson_title": "注意听、看这里",
+    "character_id": "twinkleping"
+  },
+  {
+    "id": "repeat",
+    "scene": "课堂互动指令",
+    "title": "极光萌可",
+    "command": "Read after me.",
+    "meaning": "跟着我读。",
+    "short": [
+      "Read after me."
+    ],
+    "response": "重复老师读的单词或句子",
+    "answer": [
+      "Hello!",
+      "Hello!"
+    ],
+    "response_zh": "先听老师读完，再模仿老师重复一遍相同的单词或句子。比如老师说，Hello，你也说，Hello。",
+    "usage": "学习新的英语单词，或者练习句子发音时。",
+    "action": "指向嘴巴做朗读动作，再伸手邀请对方跟读，拢耳倾听，最后点头鼓励。",
+    "lesson_title": "跟着我读",
+    "character_id": "auroraping"
+  },
+  {
+    "id": "draw",
+    "scene": "课堂互动指令",
+    "title": "王子萌可",
+    "command": "Circle. / Draw a line.",
+    "meaning": "圈出来。／画一条线。",
+    "short": [
+      "Circle.",
+      "Draw a line."
+    ],
+    "response": "在课件上圈出目标或画线",
+    "answer": [],
+    "response_zh": "听到，Circle，用笔把指定的单词或图片圈起来。听到，Draw a line，画一条线，可能是连线，也可能是画在目标下面。看清老师指的是哪一项。",
+    "usage": "在纸上或可操作的课件中，练习识别单词和图片时。",
+    "action": "在纸上的苹果周围画圆圈，再在小球下面画一条横线，最后展示结果。",
+    "lesson_title": "圈出来、画线",
+    "character_id": "princeping"
+  },
+  {
+    "id": "try",
+    "scene": "课堂互动指令",
+    "title": "缤缤萌可",
+    "command": "Can you try?",
+    "meaning": "你能试一试吗？",
+    "short": [
+      "Can you try?"
+    ],
+    "response": "Yes, I can.",
+    "answer": [
+      "Yes, I can."
+    ],
+    "response_zh": "可以回答，是的，我可以。然后勇敢尝试老师要求的内容。不需要一次就做对。",
+    "usage": "老师鼓励你尝试新单词、新句子或者新动作时。",
+    "action": "看向三块彩色积木，握拳加油，认真搭好积木，开心举手。",
+    "lesson_title": "勇敢试一试",
+    "character_id": "ellaping"
+  },
+  {
+    "id": "color",
+    "scene": "课堂互动指令",
+    "title": "纷纷萌可",
+    "command": "What color is it?",
+    "meaning": "它是什么颜色？",
+    "short": [
+      "What color is it?"
+    ],
+    "response": "It's ...",
+    "answer": [
+      "It's red."
+    ],
+    "response_zh": "先看物品的颜色，再用，It's，加上颜色来回答。比如红色的球，可以说，It's red。要根据实际看到的颜色回答。",
+    "usage": "老师指着物品或图片，询问它的颜色时。",
+    "action": "举起一颗红球，指向红球示意观察颜色。",
+    "lesson_title": "这是什么颜色",
+    "character_id": "bellaping"
+  },
+  {
+    "id": "dont-know",
+    "scene": "请求帮助与确认理解",
+    "title": "共共萌可",
+    "command": "I don't know.",
+    "meaning": "我不知道。",
+    "short": [
+      "I don't know."
+    ],
+    "response": "直接告诉老师还不知道",
+    "answer": [],
+    "response_zh": "这句话本身就是回答。不知道答案时可以直接说，不用猜着应付。老师知道以后，可以继续提示和讲解。",
+    "usage": "回答不上问题，或者还不知道答案时。",
+    "action": "双手摊开，轻轻耸肩并摇头，表现困惑。",
+    "lesson_title": "我不知道",
+    "character_id": "togetherping"
+  },
+  {
+    "id": "again",
+    "scene": "请求帮助与确认理解",
+    "title": "熊熊萌可",
+    "command": "Can you say that again?",
+    "meaning": "你能再说一遍吗？",
+    "short": [
+      "Can you say that again?"
+    ],
+    "response": "老师重复指令或句子",
+    "answer": [
+      "Can you say that again?"
+    ],
+    "response_zh": "这是请对方重复的礼貌请求。说完以后，认真听老师再说一次。",
+    "usage": "没有听清老师刚才说的话时。",
+    "action": "手放耳旁表示没听清，摊手礼貌请求，再拢耳等待重复，最后点头。",
+    "lesson_title": "请再说一遍",
+    "character_id": "mightyping"
+  },
+  {
+    "id": "slow",
+    "scene": "请求帮助与确认理解",
+    "title": "光明萌可",
+    "command": "Slow down, please.",
+    "meaning": "请慢一点。",
+    "short": [
+      "Slow down, please."
+    ],
+    "response": "老师放慢语速",
+    "answer": [],
+    "response_zh": "礼貌地请老师说慢一点。说完后等老师调整语速，再仔细听。",
+    "usage": "觉得老师讲英语太快，来不及理解时。",
+    "action": "双手掌心向下缓慢下压两次，示意放慢速度。",
+    "lesson_title": "请说慢一点",
+    "character_id": "giverping"
+  },
+  {
+    "id": "type",
+    "scene": "请求帮助与确认理解",
+    "title": "叮咚萌可",
+    "command": "Can you type it?",
+    "meaning": "你能把它打出来吗？",
+    "short": [
+      "Can you type it?"
+    ],
+    "response": "老师在聊天框输入单词",
+    "answer": [],
+    "response_zh": "请老师把刚才说的单词打在聊天框里。看到文字以后，可以结合拼写理解它的意思。",
+    "usage": "在线课堂里，听到了单词却不理解，希望看一看拼写时。",
+    "action": "指向笔记本电脑，再双手在键盘上清楚地打字。",
+    "lesson_title": "请打字给我看",
+    "character_id": "dingdongping"
+  },
+  {
+    "id": "hear-see",
+    "scene": "课堂技术问题应对",
+    "title": "兔兔萌可",
+    "command": "Can you hear / see me?",
+    "meaning": "你能听到／看到我吗？",
+    "short": [
+      "Can you hear me?",
+      "Can you see me?"
+    ],
+    "response": "Yes, I can. / No, I can't.",
+    "answer": [
+      "Yes, I can.",
+      "No, I can't."
+    ],
+    "response_zh": "能听到或看到就回答，Yes, I can。不能就回答，No, I can't。听不到要检查声音和麦克风，看不到要检查摄像头和画面，可以请大人帮忙。",
+    "usage": "在线课堂开始时，或声音、画面突然有问题，需要检查连接时。",
+    "action": "在电脑前先指耳朵，再指眼睛，点头确认连接正常。",
+    "lesson_title": "听得到、看得到吗",
+    "character_id": "hopping"
+  },
+  {
+    "id": "connection",
+    "scene": "课堂技术问题应对",
+    "title": "流浪萌可",
+    "command": "The line is not OK!",
+    "meaning": "网络连接不好！",
+    "short": [
+      "The line is not OK!"
+    ],
+    "response": "老师重新连接或调整设备",
+    "answer": [],
+    "response_zh": "用这句话告诉老师网络有问题。也可以更自然地说，The connection is bad。请老师调整连接，或者请身边的大人帮忙。",
+    "answer_extra": [
+      "The connection is bad."
+    ],
+    "usage": "上课时画面卡住、声音断断续续，网络连接不佳时。",
+    "action": "面对卡住的电脑画面摊手，指向断开的网络图标。",
+    "lesson_title": "网络连接不好",
+    "character_id": "petitping"
+  },
+  {
+    "id": "praise",
+    "scene": "表扬与鼓励回应",
+    "title": "狐狐萌可",
+    "command": "Good job! / Well done!",
+    "meaning": "干得好！／做得好！",
+    "short": [
+      "Good job!",
+      "Well done!"
+    ],
+    "response": "Thank you!",
+    "answer": [
+      "Thank you!"
+    ],
+    "response_zh": "老师说，Good job，或者，Well done，都是在表扬你。可以开心地点点头，并说，谢谢。",
+    "usage": "答对问题、完成练习，得到老师表扬时。",
+    "action": "面向观众伸出大拇指，再轻轻鼓掌表示表扬。",
+    "lesson_title": "做得真棒",
+    "character_id": "allureping"
+  },
+  {
+    "id": "high-five",
+    "scene": "表扬与鼓励回应",
+    "title": "贴贴萌可",
+    "command": "High five!",
+    "meaning": "击个掌吧！",
+    "short": [
+      "High five!"
+    ],
+    "response": "举起手掌，和老师击掌",
+    "answer": [],
+    "response_zh": "把手举起来，伸开手掌，和老师击掌。在线上课时，可以朝屏幕做隔空击掌的动作。",
+    "usage": "和老师一起庆祝成功，或者完成一个小挑战时。",
+    "action": "举起张开的右手，掌心正对观众，温柔地朝镜头伸手隔空击掌，再收回。",
+    "lesson_title": "击个掌吧",
+    "character_id": "stickerping"
+  },
+  {
+    "id": "goodbye",
+    "scene": "课堂结束用语",
+    "title": "透明萌可",
+    "command": "See you next time!",
+    "meaning": "下次再见！",
+    "short": [
+      "See you next time!"
+    ],
+    "response": "See you! / Bye-bye!",
+    "answer": [
+      "See you!",
+      "Bye-bye!"
+    ],
+    "response_zh": "课程结束时，挥挥手和老师告别。可以回答，再见，或者，拜拜。",
+    "usage": "一节课结束，和老师约好下次再见时。",
+    "action": "面向观众缓慢挥手告别，最后轻轻点头。",
+    "lesson_title": "下次见",
+    "character_id": "lucyping"
+  }
+]

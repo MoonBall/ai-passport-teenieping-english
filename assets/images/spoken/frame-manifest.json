@@ -1,0 +1,189 @@
+[
+  {
+    "id": "name",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "heartsping",
+    "character_name": "爱心萌可",
+    "bytes": 18262,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-1.png",
+    "sha256": "b12ddb0928051d3186c3bfd0e803f67e5ec3ee05281b54886aebb74f3c43a71c"
+  },
+  {
+    "id": "feeling",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "shimmerping",
+    "character_name": "银光萌可",
+    "bytes": 18256,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-1.png",
+    "sha256": "b12ddb0928051d3186c3bfd0e803f67e5ec3ee05281b54886aebb74f3c43a71c"
+  },
+  {
+    "id": "age",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "sparkleping",
+    "character_name": "星光萌可",
+    "bytes": 19070,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-1.png",
+    "sha256": "b12ddb0928051d3186c3bfd0e803f67e5ec3ee05281b54886aebb74f3c43a71c"
+  },
+  {
+    "id": "listen",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "twinkleping",
+    "character_name": "月光萌可",
+    "bytes": 18645,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-1.png",
+    "sha256": "b12ddb0928051d3186c3bfd0e803f67e5ec3ee05281b54886aebb74f3c43a71c"
+  },
+  {
+    "id": "repeat",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "auroraping",
+    "character_name": "极光萌可",
+    "bytes": 17830,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-2.png",
+    "sha256": "78b77f8ba398806c8239ccfe860cb5327f9b5e451dca11147cdd5d38a9108845"
+  },
+  {
+    "id": "draw",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "princeping",
+    "character_name": "王子萌可",
+    "bytes": 15323,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-2.png",
+    "sha256": "78b77f8ba398806c8239ccfe860cb5327f9b5e451dca11147cdd5d38a9108845"
+  },
+  {
+    "id": "try",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "ellaping",
+    "character_name": "缤缤萌可",
+    "bytes": 20483,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-2.png",
+    "sha256": "78b77f8ba398806c8239ccfe860cb5327f9b5e451dca11147cdd5d38a9108845"
+  },
+  {
+    "id": "color",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "bellaping",
+    "character_name": "纷纷萌可",
+    "bytes": 21562,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-2.png",
+    "sha256": "78b77f8ba398806c8239ccfe860cb5327f9b5e451dca11147cdd5d38a9108845"
+  },
+  {
+    "id": "dont-know",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "togetherping",
+    "character_name": "共共萌可",
+    "bytes": 20152,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-3.png",
+    "sha256": "8e81468e95fec4df5f8ae3bc28db72f9c9549ed98098e36d80f71e6593012f7f"
+  },
+  {
+    "id": "again",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "mightyping",
+    "character_name": "熊熊萌可",
+    "bytes": 13384,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-3.png",
+    "sha256": "8e81468e95fec4df5f8ae3bc28db72f9c9549ed98098e36d80f71e6593012f7f"
+  },
+  {
+    "id": "slow",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "giverping",
+    "character_name": "光明萌可",
+    "bytes": 13320,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-3.png",
+    "sha256": "8e81468e95fec4df5f8ae3bc28db72f9c9549ed98098e36d80f71e6593012f7f"
+  },
+  {
+    "id": "type",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "dingdongping",
+    "character_name": "叮咚萌可",
+    "bytes": 18931,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-3.png",
+    "sha256": "8e81468e95fec4df5f8ae3bc28db72f9c9549ed98098e36d80f71e6593012f7f"
+  },
+  {
+    "id": "hear-see",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "hopping",
+    "character_name": "兔兔萌可",
+    "bytes": 14685,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-4.png",
+    "sha256": "635b5c3e6602006b91f5371d4b759b38538e015bb14a8eec98a7d72252e299cf"
+  },
+  {
+    "id": "connection",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "petitping",
+    "character_name": "流浪萌可",
+    "bytes": 18524,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-4.png",
+    "sha256": "635b5c3e6602006b91f5371d4b759b38538e015bb14a8eec98a7d72252e299cf"
+  },
+  {
+    "id": "praise",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "allureping",
+    "character_name": "狐狐萌可",
+    "bytes": 13643,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-4.png",
+    "sha256": "635b5c3e6602006b91f5371d4b759b38538e015bb14a8eec98a7d72252e299cf"
+  },
+  {
+    "id": "high-five",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "stickerping",
+    "character_name": "贴贴萌可",
+    "bytes": 16830,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-4.png",
+    "sha256": "635b5c3e6602006b91f5371d4b759b38538e015bb14a8eec98a7d72252e299cf"
+  },
+  {
+    "id": "goodbye",
+    "frames": 4,
+    "frame_ms": 1000,
+    "character_id": "lucyping",
+    "character_name": "透明萌可",
+    "bytes": 12700,
+    "source": "ChatGPT Create image",
+    "file": "chatgpt/group-5.png",
+    "sha256": "5f817b9b05fa0c74b9a893f4895260e6ddb65007107b2ef4ff566cffec620ba5"
+  }
+]

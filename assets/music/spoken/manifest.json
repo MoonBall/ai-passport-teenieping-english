@@ -1,0 +1,402 @@
+{
+  "sample_rate": 16000,
+  "voices": {
+    "en": "Samantha",
+    "zh": "Tingting"
+  },
+  "cards": [
+    {
+      "id": "name",
+      "stages_ms": [
+        0,
+        2684,
+        6711,
+        19296
+      ],
+      "short": {
+        "offset": 16,
+        "bytes": 10226,
+        "samples": 20451,
+        "duration_ms": 1278,
+        "sha256": "f24208d2c13645a42313b7e38d1ffbac8f12abbe4cc871c0a51b6b9512e6d00e"
+      },
+      "lesson": {
+        "offset": 10242,
+        "bytes": 194861,
+        "samples": 389722,
+        "duration_ms": 24357,
+        "sha256": "9cb2d1bd76ab9b964a988744da2d2d2c156135731b664cad85125b75c63a0a84"
+      }
+    },
+    {
+      "id": "feeling",
+      "stages_ms": [
+        0,
+        2684,
+        6089,
+        21572
+      ],
+      "short": {
+        "offset": 205103,
+        "bytes": 8178,
+        "samples": 16356,
+        "duration_ms": 1022,
+        "sha256": "fe071963278a5101dd40f7316b0d3536cc928245a99519ee1193e50627991f56"
+      },
+      "lesson": {
+        "offset": 213281,
+        "bytes": 201857,
+        "samples": 403714,
+        "duration_ms": 25232,
+        "sha256": "e60671fb8487126696a58bdc1d61639abb9ecb71a4385f5a03bef51452c2d88a"
+      }
+    },
+    {
+      "id": "age",
+      "stages_ms": [
+        0,
+        2684,
+        6527,
+        20620
+      ],
+      "short": {
+        "offset": 415138,
+        "bytes": 10873,
+        "samples": 21746,
+        "duration_ms": 1359,
+        "sha256": "f51b50a37105b99f7d807bc10830ed4dde3f3127f7190acf9dea30940bee3642"
+      },
+      "lesson": {
+        "offset": 426011,
+        "bytes": 194726,
+        "samples": 389451,
+        "duration_ms": 24340,
+        "sha256": "352b9dff2f9383a50b99bbc9095ee47c43469137960a98eb20f6215ec5c90ce4"
+      }
+    },
+    {
+      "id": "listen",
+      "stages_ms": [
+        0,
+        2106,
+        7402,
+        17943
+      ],
+      "short": {
+        "offset": 620737,
+        "bytes": 14935,
+        "samples": 29869,
+        "duration_ms": 1866,
+        "sha256": "ad1f461abc1faf073d930f310c980cadcb80e2b71afd80b313ec37a91080a258"
+      },
+      "lesson": {
+        "offset": 635672,
+        "bytes": 181035,
+        "samples": 362070,
+        "duration_ms": 22629,
+        "sha256": "cbdfd21858fa1da3ae8fc48485668ad515e2ba5c1334b038835ea3b00eb4476d"
+      }
+    },
+    {
+      "id": "repeat",
+      "stages_ms": [
+        0,
+        2106,
+        5986,
+        17465
+      ],
+      "short": {
+        "offset": 816707,
+        "bytes": 10998,
+        "samples": 21996,
+        "duration_ms": 1374,
+        "sha256": "5172b7e9f2aab5952cb9d17c5561968b98b9883691706893578d6cc0bda2963e"
+      },
+      "lesson": {
+        "offset": 827705,
+        "bytes": 178694,
+        "samples": 357388,
+        "duration_ms": 22336,
+        "sha256": "db27d418fd9232cacd632542130b600c7fda8f7eb2352acef207824534826be1"
+      }
+    },
+    {
+      "id": "draw",
+      "stages_ms": [
+        0,
+        2106,
+        8026,
+        21813
+      ],
+      "short": {
+        "offset": 1006399,
+        "bytes": 16411,
+        "samples": 32822,
+        "duration_ms": 2051,
+        "sha256": "836af359f09e26036553e5243e15434547bfdbe2e9db47f75e723fb4947338ec"
+      },
+      "lesson": {
+        "offset": 1022810,
+        "bytes": 221332,
+        "samples": 442664,
+        "duration_ms": 27666,
+        "sha256": "a69b21307bd8c36befe14ec1b7d0737b719838e81f470d23f0b1a90312287c53"
+      }
+    },
+    {
+      "id": "try",
+      "stages_ms": [
+        0,
+        2106,
+        6191,
+        15955
+      ],
+      "short": {
+        "offset": 1244142,
+        "bytes": 10577,
+        "samples": 21153,
+        "duration_ms": 1322,
+        "sha256": "833e0175a833b7ec060a79d812b21f33ec689ef6c57c7a321c44da16c47c9d09"
+      },
+      "lesson": {
+        "offset": 1254719,
+        "bytes": 170529,
+        "samples": 341057,
+        "duration_ms": 21316,
+        "sha256": "229b04ea3bb9ade134b178efe10b8b7f6ee7b65e5aabbda0b958b6524e9f310d"
+      }
+    },
+    {
+      "id": "color",
+      "stages_ms": [
+        0,
+        2106,
+        6274,
+        18136
+      ],
+      "short": {
+        "offset": 1425248,
+        "bytes": 10889,
+        "samples": 21777,
+        "duration_ms": 1361,
+        "sha256": "06627c5262c48cf3172df45f2fc258a8db600840ece1b9a73287e713f9f53bd8"
+      },
+      "lesson": {
+        "offset": 1436137,
+        "bytes": 183551,
+        "samples": 367102,
+        "duration_ms": 22943,
+        "sha256": "b56f6db518c0e2dbf8976b1897157a8b6266a54b853608618e6b36320446f29f"
+      }
+    },
+    {
+      "id": "dont-know",
+      "stages_ms": [
+        0,
+        2751,
+        6524,
+        16640
+      ],
+      "short": {
+        "offset": 1619688,
+        "bytes": 10289,
+        "samples": 20578,
+        "duration_ms": 1286,
+        "sha256": "a4a5ef795d2da3d3503e7231204ce161952dbbccc40c704916b5dddd51c9b328"
+      },
+      "lesson": {
+        "offset": 1629977,
+        "bytes": 169124,
+        "samples": 338248,
+        "duration_ms": 21140,
+        "sha256": "41cac69df9f9b842be88457c8e5d287f2e1fa0f7d92c76a63d9dd93365cac5ca"
+      }
+    },
+    {
+      "id": "again",
+      "stages_ms": [
+        0,
+        2751,
+        7423,
+        16049
+      ],
+      "short": {
+        "offset": 1799101,
+        "bytes": 13763,
+        "samples": 27526,
+        "duration_ms": 1720,
+        "sha256": "b9acbf550e6aa633309a558583f5a7557adc51ea608a5c114c69258fd20c6f55"
+      },
+      "lesson": {
+        "offset": 1812864,
+        "bytes": 157839,
+        "samples": 315677,
+        "duration_ms": 19729,
+        "sha256": "ec47c2c516aa668a1c70ef096109ae15923765b8f0646817ba30208c2b7f4b87"
+      }
+    },
+    {
+      "id": "slow",
+      "stages_ms": [
+        0,
+        2751,
+        7211,
+        14212
+      ],
+      "short": {
+        "offset": 1970703,
+        "bytes": 15336,
+        "samples": 30672,
+        "duration_ms": 1917,
+        "sha256": "026a93efbab46dd0e249f28a13cfaaadb8790c56ae59163f7fd966547e6fb7ab"
+      },
+      "lesson": {
+        "offset": 1986039,
+        "bytes": 148808,
+        "samples": 297615,
+        "duration_ms": 18600,
+        "sha256": "ea22deac5bff512e251879c995660a46115709506d757826f6b3e65ab7692858"
+      }
+    },
+    {
+      "id": "type",
+      "stages_ms": [
+        0,
+        2751,
+        7256,
+        15662
+      ],
+      "short": {
+        "offset": 2134847,
+        "bytes": 10842,
+        "samples": 21684,
+        "duration_ms": 1355,
+        "sha256": "dcebe2d57edb23afa6cf9c31b661672fcd740b5911142eea95bd257f0c518610"
+      },
+      "lesson": {
+        "offset": 2145689,
+        "bytes": 173757,
+        "samples": 347513,
+        "duration_ms": 21719,
+        "sha256": "397bb14677613c8f50f4b5a4705808539bdf31a36b92d5d27685a0273a0ed5cd"
+      }
+    },
+    {
+      "id": "hear-see",
+      "stages_ms": [
+        0,
+        2460,
+        8585,
+        26092
+      ],
+      "short": {
+        "offset": 2319446,
+        "bytes": 20248,
+        "samples": 40495,
+        "duration_ms": 2530,
+        "sha256": "fc187127a133769d7cbf61b11178a1e12563e57bd71d4519d914638c5f0b0fe8"
+      },
+      "lesson": {
+        "offset": 2339694,
+        "bytes": 265700,
+        "samples": 531399,
+        "duration_ms": 33212,
+        "sha256": "da5ec049226d882869ad1040cf75b0cd7a8429b8e9deb42734251ae6852fcbdc"
+      }
+    },
+    {
+      "id": "connection",
+      "stages_ms": [
+        0,
+        2460,
+        7211,
+        19694
+      ],
+      "short": {
+        "offset": 2605394,
+        "bytes": 14610,
+        "samples": 29220,
+        "duration_ms": 1826,
+        "sha256": "adefcf9933caf5455fef64ea935157ca34e3beac39bec85352b83de49a242418"
+      },
+      "lesson": {
+        "offset": 2620004,
+        "bytes": 203955,
+        "samples": 407910,
+        "duration_ms": 25494,
+        "sha256": "10a011d43df82f4e1d49924cdb958f0ac67b33299956b299d67e87a234452acd"
+      }
+    },
+    {
+      "id": "praise",
+      "stages_ms": [
+        0,
+        2299,
+        7452,
+        17440
+      ],
+      "short": {
+        "offset": 2823959,
+        "bytes": 15497,
+        "samples": 30994,
+        "duration_ms": 1937,
+        "sha256": "fc0dda279d4ff92f0770f219afeec7ef9f56196af775ebe5fcd8fb60c9ec2f02"
+      },
+      "lesson": {
+        "offset": 2839456,
+        "bytes": 178788,
+        "samples": 357576,
+        "duration_ms": 22348,
+        "sha256": "1c21387ad419b6a5f2a5abf3db19d75f21b6e7fe2759ee3f5409cba6eb073f70"
+      }
+    },
+    {
+      "id": "high-five",
+      "stages_ms": [
+        0,
+        2299,
+        5902,
+        14968
+      ],
+      "short": {
+        "offset": 3018244,
+        "bytes": 8946,
+        "samples": 17891,
+        "duration_ms": 1118,
+        "sha256": "4778ac114219e7dbea52fd7d78cb0a1c8069c68d3ed9719b4709ddce30ad82a0"
+      },
+      "lesson": {
+        "offset": 3027190,
+        "bytes": 162861,
+        "samples": 325722,
+        "duration_ms": 20357,
+        "sha256": "1baf958058417507b158f3a7ea8a8c92e56ae881f96f522d89908e699e1a994e"
+      }
+    },
+    {
+      "id": "goodbye",
+      "stages_ms": [
+        0,
+        2125,
+        6554,
+        15772
+      ],
+      "short": {
+        "offset": 3190051,
+        "bytes": 14077,
+        "samples": 28154,
+        "duration_ms": 1759,
+        "sha256": "a8783c132034c070f7a23f07eff2ff26c8131de30de5c9c7fbc24fafc6573625"
+      },
+      "lesson": {
+        "offset": 3204128,
+        "bytes": 163377,
+        "samples": 326754,
+        "duration_ms": 20422,
+        "sha256": "cbac8360dda9ddec1b5187525b448f8ac5f129f0deca3dfb345cac614974b459"
+      }
+    }
+  ],
+  "payload_bytes": 3367489,
+  "crc32": 3285320706
+}

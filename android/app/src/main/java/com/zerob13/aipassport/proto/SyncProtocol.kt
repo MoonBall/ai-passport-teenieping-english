@@ -1,0 +1,340 @@
+// android/.../proto/SyncProtocol.kt —— ai-passport-sync 协议:帧编解码与消息构造。
+// 与设备端 main/sync_proto.h 对齐,协议定义见
+// docs/software-design/passport-sync-app.md(中英双语)。
+package com.zerob13.aipassport.proto
+
+import java.util.UUID
+
+object SyncProtocol {
+    // GATT 服务/特征 UUID(小写,与设备端一致)
+    val SERVICE_UUID: UUID = UUID.fromString("61692d70-6173-7370-6f72-742d73796e63")
+    val TX_UUID: UUID = UUID.fromString("61692d70-6173-7370-6f72-742d73796e64") // 设备→手机, Notify
+    val RX_UUID: UUID = UUID.fromString("61692d70-6173-7370-6f72-742d73796e65") // 手机→设备, Write
+    const val DEVICE_NAME = "FoloPassport"
+    const val PREFERRED_MTU = 512
+
+    fun matchesAdvertisement(
+        advertisedName: String?,
+        cachedName: String?,
+        advertisedServices: Collection<UUID>,
+    ): Boolean =
+        advertisedName == DEVICE_NAME ||
+            cachedName == DEVICE_NAME ||
+            SERVICE_UUID in advertisedServices
+
+    const val PROTO_VER = 2
+    const val MAX_TITLE = 60
+    const val MAX_SCHEDULE_ITEMS = 40
+    const val MAX_MEDIA_SOURCE = 24
+    const val MAX_PAYLOAD = 240
+    const val AUDIO_DATA_MAX = MAX_PAYLOAD - 2 // seq(2B) 之外的负载上限
+    const val MEDIA_ART_WIDTH = 96
+    const val MEDIA_ART_HEIGHT = 96
+    const val MEDIA_ART_BYTES = MEDIA_ART_WIDTH * MEDIA_ART_HEIGHT * 2
+    const val MEDIA_ART_CHUNK = MAX_PAYLOAD - 2 // offset u16 之外的负载上限
+    const val CODEC_IMA_ADPCM = 1
+
+    // 帧头
+    const val FRAME_HEADER = 0xA5.toByte()
+
+    // RX(手机→设备)消息类型
+    const val RX_HELLO = 0x01
+    const val RX_SCHEDULE_CLEAR = 0x02
+    const val RX_SCHEDULE_ADD = 0x03
+    const val RX_TODO_CLEAR = 0x05
+    const val RX_TODO_ADD = 0x06
+    const val RX_MEDIA_CLEAR = 0x08
+    const val RX_MEDIA_INFO = 0x09
+    const val RX_MEDIA_ART_BEGIN = 0x0A
+    const val RX_MEDIA_ART_DATA = 0x0B
+    const val RX_MEDIA_ART_END = 0x0C
+    const val RX_MEDIA_PROGRESS = 0x0D
+
+    // TX(设备→手机)消息类型
+    const val TX_AUDIO_START = 0x10
+    const val TX_AUDIO_DATA = 0x11
+    const val TX_AUDIO_END = 0x12
+    const val TX_TODO_TOGGLE = 0x20
+    const val TX_STATUS = 0x30
+
+    // 状态标志
+    const val FLAG_RECORDING = 0x01
+    const val FLAG_CHARGING = 0x02
+    const val MEDIA_FLAG_PLAYING = 0x01
+    const val MEDIA_FLAG_HAS_ART = 0x02
+    const val SCHEDULE_FLAG_ALL_DAY = 0x01
+}
+
+/** 一条日程(与设备端 sync_sched_item_t 对齐) */
+data class ScheduleItem(
+    val id: Int,
+    val epochDay: Int,
+    val startMin: Int,
+    val endMin: Int,
+    val allDay: Boolean,
+    val title: String,
+)
+
+/** 一条 Todo(与设备端 sync_todo_item_t 对齐) */
+data class TodoItem(
+    val id: Int,
+    var done: Boolean,
+    val title: String,
+)
+
+/** 设备状态(STATUS 消息) */
+data class DeviceStatus(
+    val soc: Int,          // -1 = 未知
+    val recording: Boolean,
+    val charging: Boolean,
+    val batteryMv: Int,
+)
+
+/** 一段录音的元信息(AUDIO_START / AUDIO_END) */
+data class RecordingMeta(
+    val unixTime: Long,
+    val sampleRate: Int,
+    val codec: Int,
+    val channels: Int,
+    val durationMs: Long,
+    val pcmSamples: Long,
+    val droppedBytes: Long,
+)
+
+/** Android MediaSession 当前播放快照。封面是固定 96x96 RGB565 little-endian。 */
+data class NowPlaying(
+    val title: String,
+    val artist: String,
+    val album: String,
+    val source: String,
+    val durationMs: Long,
+    val positionMs: Long,
+    val playing: Boolean,
+    val artworkRgb565: ByteArray?,
+)
+
+/** 帧编解码(纯 Kotlin,可 JVM 测试) */
+object FrameCodec {
+    class Frame(val type: Int, val payload: ByteArray) {
+        val len: Int get() = payload.size
+    }
+
+    /** 解析一帧。帧头/长度非法返回 null。 */
+    fun decode(data: ByteArray, offset: Int, length: Int): Frame? {
+        if (length < 3) return null
+        if (data[offset] != SyncProtocol.FRAME_HEADER) return null
+        val len = data[offset + 2].toInt() and 0xFF
+        if (length < 3 + len) return null
+        val type = data[offset + 1].toInt() and 0xFF
+        return Frame(type, data.copyOfRange(offset + 3, offset + 3 + len))
+    }
+
+    /** 构造一帧。payload 超过上限返回 null。 */
+    fun encode(type: Int, payload: ByteArray): ByteArray? {
+        if (payload.size > SyncProtocol.MAX_PAYLOAD) return null
+        val out = ByteArray(3 + payload.size)
+        out[0] = SyncProtocol.FRAME_HEADER
+        out[1] = type.toByte()
+        out[2] = payload.size.toByte()
+        payload.copyInto(out, 3)
+        return out
+    }
+
+    // ---- 小端读写 ----
+    fun putU16(b: ByteArray, off: Int, v: Int) {
+        b[off] = (v and 0xFF).toByte()
+        b[off + 1] = ((v ushr 8) and 0xFF).toByte()
+    }
+
+    fun putU32(b: ByteArray, off: Int, v: Long) {
+        for (i in 0 until 4) b[off + i] = ((v ushr (8 * i)) and 0xFF).toByte()
+    }
+
+    fun getU16(b: ByteArray, off: Int): Int =
+        (b[off].toInt() and 0xFF) or ((b[off + 1].toInt() and 0xFF) shl 8)
+
+    fun getU32(b: ByteArray, off: Int): Long {
+        var v = 0L
+        for (i in 0 until 4) v = v or ((b[off + i].toLong() and 0xFF) shl (8 * i))
+        return v
+    }
+
+    fun getI32(b: ByteArray, off: Int): Int = getU32(b, off).toInt()
+
+    fun getI16(b: ByteArray, off: Int): Int {
+        val u = getU16(b, off)
+        return if (u >= 0x8000) u - 0x10000 else u
+    }
+}
+
+/** 手机→设备 消息构造(纯 Kotlin,可 JVM 测试) */
+object RxMessages {
+    private fun textBytes(text: String, maxBytes: Int): ByteArray {
+        val bytes = text.encodeToByteArray()
+        if (bytes.size <= maxBytes) return bytes
+
+        var length = maxBytes
+        while (length > 0 && (bytes[length].toInt() and 0xC0) == 0x80) length--
+        return bytes.copyOf(length)
+    }
+
+    /** HELLO: ver u8, unix_time u32, tz_min i16 */
+    fun hello(unixTime: Long, tzOffsetMin: Int): ByteArray? {
+        val p = ByteArray(7)
+        p[0] = SyncProtocol.PROTO_VER.toByte()
+        FrameCodec.putU32(p, 1, unixTime)
+        FrameCodec.putU16(p, 5, tzOffsetMin)
+        return FrameCodec.encode(SyncProtocol.RX_HELLO, p)
+    }
+
+    fun scheduleClear(): ByteArray? =
+        FrameCodec.encode(SyncProtocol.RX_SCHEDULE_CLEAR, ByteArray(0))
+
+    /** SCHEDULE_ADD: id u16, epoch_day i32, start/end u16, flags u8, title. */
+    fun scheduleAdd(item: ScheduleItem): ByteArray? {
+        if (item.id !in 0..0xFFFF || item.startMin !in 0..1439 ||
+            item.endMin !in 0..1439 || (!item.allDay && item.startMin >= item.endMin)
+        ) return null
+        val t = textBytes(item.title, SyncProtocol.MAX_TITLE)
+        val titleLen = t.size
+        val p = ByteArray(12 + titleLen)
+        FrameCodec.putU16(p, 0, item.id)
+        FrameCodec.putU32(p, 2, item.epochDay.toLong() and 0xFFFF_FFFFL)
+        FrameCodec.putU16(p, 6, if (item.allDay) 0 else item.startMin)
+        FrameCodec.putU16(p, 8, if (item.allDay) 1439 else item.endMin)
+        p[10] = if (item.allDay) SyncProtocol.SCHEDULE_FLAG_ALL_DAY.toByte() else 0
+        p[11] = titleLen.toByte()
+        t.copyInto(p, 12, 0, titleLen)
+        return FrameCodec.encode(SyncProtocol.RX_SCHEDULE_ADD, p)
+    }
+
+    fun todoClear(): ByteArray? =
+        FrameCodec.encode(SyncProtocol.RX_TODO_CLEAR, ByteArray(0))
+
+    /** TODO_ADD: id u16, done u8, title_len u8, title */
+    fun todoAdd(item: TodoItem): ByteArray? {
+        val t = textBytes(item.title, SyncProtocol.MAX_TITLE)
+        val titleLen = t.size
+        val p = ByteArray(4 + titleLen)
+        FrameCodec.putU16(p, 0, item.id)
+        p[2] = if (item.done) 1 else 0
+        p[3] = titleLen.toByte()
+        t.copyInto(p, 4, 0, titleLen)
+        return FrameCodec.encode(SyncProtocol.RX_TODO_ADD, p)
+    }
+
+    fun mediaClear(): ByteArray? =
+        FrameCodec.encode(SyncProtocol.RX_MEDIA_CLEAR, ByteArray(0))
+
+    /** MEDIA_INFO: flags, duration/position, then title/artist/album/source. */
+    fun mediaInfo(item: NowPlaying): ByteArray? {
+        val parts = arrayOf(
+            textBytes(item.title, SyncProtocol.MAX_TITLE),
+            textBytes(item.artist, SyncProtocol.MAX_TITLE),
+            textBytes(item.album, SyncProtocol.MAX_TITLE),
+            textBytes(item.source, SyncProtocol.MAX_MEDIA_SOURCE),
+        )
+        val p = ByteArray(9 + parts.sumOf { 1 + it.size })
+        p[0] = ((if (item.playing) SyncProtocol.MEDIA_FLAG_PLAYING else 0) or
+            (if (item.artworkRgb565 != null) SyncProtocol.MEDIA_FLAG_HAS_ART else 0)).toByte()
+        FrameCodec.putU32(p, 1, item.durationMs)
+        FrameCodec.putU32(p, 5, item.positionMs)
+        var offset = 9
+        parts.forEach { text ->
+            p[offset++] = text.size.toByte()
+            text.copyInto(p, offset)
+            offset += text.size
+        }
+        return FrameCodec.encode(SyncProtocol.RX_MEDIA_INFO, p)
+    }
+
+    /** ART_BEGIN + ordered offset chunks + ART_END. Invalid-sized art is skipped. */
+    fun mediaArtworkFrames(art: ByteArray): List<ByteArray> {
+        if (art.size != SyncProtocol.MEDIA_ART_BYTES) return emptyList()
+        val frames = ArrayList<ByteArray>(2 + art.size / SyncProtocol.MEDIA_ART_CHUNK)
+        val total = ByteArray(2)
+        FrameCodec.putU16(total, 0, art.size)
+        FrameCodec.encode(SyncProtocol.RX_MEDIA_ART_BEGIN, total)?.let(frames::add)
+        var offset = 0
+        while (offset < art.size) {
+            val count = minOf(SyncProtocol.MEDIA_ART_CHUNK, art.size - offset)
+            val payload = ByteArray(2 + count)
+            FrameCodec.putU16(payload, 0, offset)
+            art.copyInto(payload, 2, offset, offset + count)
+            FrameCodec.encode(SyncProtocol.RX_MEDIA_ART_DATA, payload)?.let(frames::add)
+            offset += count
+        }
+        FrameCodec.encode(SyncProtocol.RX_MEDIA_ART_END, total)?.let(frames::add)
+        return frames
+    }
+
+    /** MEDIA_PROGRESS: flags u8, position_ms u32, duration_ms u32. */
+    fun mediaProgress(positionMs: Long, durationMs: Long, playing: Boolean): ByteArray? {
+        val p = ByteArray(9)
+        p[0] = if (playing) SyncProtocol.MEDIA_FLAG_PLAYING.toByte() else 0
+        FrameCodec.putU32(p, 1, positionMs)
+        FrameCodec.putU32(p, 5, durationMs)
+        return FrameCodec.encode(SyncProtocol.RX_MEDIA_PROGRESS, p)
+    }
+}
+
+/** 设备→手机 消息解析(纯 Kotlin,可 JVM 测试) */
+object TxMessages {
+    /** 尝试解析一条 TX 帧。返回 null = 帧格式错误或类型未知。 */
+    fun parse(frame: FrameCodec.Frame): Any? = when (frame.type) {
+        SyncProtocol.TX_AUDIO_START -> parseAudioStart(frame.payload)
+        SyncProtocol.TX_AUDIO_END -> parseAudioEnd(frame.payload)
+        SyncProtocol.TX_TODO_TOGGLE -> parseTodoToggle(frame.payload)
+        SyncProtocol.TX_STATUS -> parseStatus(frame.payload)
+        SyncProtocol.TX_AUDIO_DATA -> parseAudioData(frame.payload)
+        else -> null
+    }
+
+    /** AUDIO_START: unix_time u32, sample_rate u16, codec u8, channels u8 */
+    fun parseAudioStart(p: ByteArray): RecordingMeta? {
+        if (p.size < 8) return null
+        return RecordingMeta(
+            unixTime = FrameCodec.getU32(p, 0),
+            sampleRate = FrameCodec.getU16(p, 4),
+            codec = p[6].toInt() and 0xFF,
+            channels = p[7].toInt() and 0xFF,
+            durationMs = 0, pcmSamples = 0, droppedBytes = 0,
+        )
+    }
+
+    /** AUDIO_DATA: seq u16, data */
+    fun parseAudioData(p: ByteArray): Pair<Int, ByteArray>? {
+        if (p.size < 2) return null
+        return FrameCodec.getU16(p, 0) to p.copyOfRange(2, p.size)
+    }
+
+    /** AUDIO_END: duration_ms u32, pcm_samples u32, dropped_bytes u32 */
+    fun parseAudioEnd(p: ByteArray): RecordingMeta? {
+        if (p.size < 12) return null
+        return RecordingMeta(
+            unixTime = 0, sampleRate = 0, codec = 0, channels = 0,
+            durationMs = FrameCodec.getU32(p, 0),
+            pcmSamples = FrameCodec.getU32(p, 4),
+            droppedBytes = FrameCodec.getU32(p, 8),
+        )
+    }
+
+    /** TODO_TOGGLE: id u16, done u8 */
+    fun parseTodoToggle(p: ByteArray): Pair<Int, Boolean>? {
+        if (p.size < 3) return null
+        return FrameCodec.getU16(p, 0) to (p[2].toInt() != 0)
+    }
+
+    /** STATUS: soc u8, flags u8, battery_mv u16 */
+    fun parseStatus(p: ByteArray): DeviceStatus? {
+        if (p.size < 4) return null
+        val soc = p[0].toInt() and 0xFF
+        val flags = p[1].toInt() and 0xFF
+        return DeviceStatus(
+            soc = if (soc == 0xFF) -1 else soc,
+            recording = (flags and SyncProtocol.FLAG_RECORDING) != 0,
+            charging = (flags and SyncProtocol.FLAG_CHARGING) != 0,
+            batteryMv = FrameCodec.getU16(p, 2),
+        )
+    }
+}

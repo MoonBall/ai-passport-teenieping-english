@@ -1,0 +1,474 @@
+{
+  "name": {
+    "file": "chatgpt/group-1.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "heartsping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1086,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      270,
+      543,
+      815,
+      1086
+    ]
+  },
+  "feeling": {
+    "file": "chatgpt/group-1.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "shimmerping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1086,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      270,
+      543,
+      815,
+      1086
+    ]
+  },
+  "age": {
+    "file": "chatgpt/group-1.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "sparkleping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1086,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      270,
+      543,
+      815,
+      1086
+    ]
+  },
+  "listen": {
+    "file": "chatgpt/group-1.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "twinkleping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1086,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      270,
+      543,
+      815,
+      1086
+    ]
+  },
+  "repeat": {
+    "file": "chatgpt/group-2.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "auroraping",
+    "x_bounds": [
+      0,
+      361,
+      724,
+      1086,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      543,
+      814,
+      1086
+    ]
+  },
+  "draw": {
+    "file": "chatgpt/group-2.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "princeping",
+    "x_bounds": [
+      0,
+      361,
+      724,
+      1086,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      543,
+      814,
+      1086
+    ]
+  },
+  "try": {
+    "file": "chatgpt/group-2.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "ellaping",
+    "x_bounds": [
+      0,
+      361,
+      724,
+      1086,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      543,
+      814,
+      1086
+    ]
+  },
+  "color": {
+    "file": "chatgpt/group-2.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "bellaping",
+    "x_bounds": [
+      0,
+      361,
+      724,
+      1086,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      543,
+      814,
+      1086
+    ]
+  },
+  "dont-know": {
+    "file": "chatgpt/group-3.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "togetherping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1084,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      544,
+      814,
+      1086
+    ]
+  },
+  "again": {
+    "file": "chatgpt/group-3.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "mightyping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1084,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      544,
+      814,
+      1086
+    ]
+  },
+  "slow": {
+    "file": "chatgpt/group-3.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "giverping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1084,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      544,
+      814,
+      1086
+    ]
+  },
+  "type": {
+    "file": "chatgpt/group-3.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "dingdongping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1084,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      544,
+      814,
+      1086
+    ]
+  },
+  "hear-see": {
+    "file": "chatgpt/group-4.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "hopping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1085,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      544,
+      810,
+      1086
+    ]
+  },
+  "connection": {
+    "file": "chatgpt/group-4.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "petitping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1085,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      544,
+      810,
+      1086
+    ]
+  },
+  "praise": {
+    "file": "chatgpt/group-4.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "allureping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1085,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      544,
+      810,
+      1086
+    ]
+  },
+  "high-five": {
+    "file": "chatgpt/group-4.png",
+    "columns": 4,
+    "rows": 4,
+    "cells": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "stickerping",
+    "x_bounds": [
+      0,
+      362,
+      724,
+      1085,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      271,
+      544,
+      810,
+      1086
+    ]
+  },
+  "goodbye": {
+    "file": "chatgpt/group-5.png",
+    "columns": 2,
+    "rows": 2,
+    "cells": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "inset": 4,
+    "frame_ms": 1000,
+    "character_id": "lucyping",
+    "x_bounds": [
+      0,
+      724,
+      1448
+    ],
+    "y_bounds": [
+      0,
+      542,
+      1086
+    ]
+  }
+}

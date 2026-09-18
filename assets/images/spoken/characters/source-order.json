@@ -1,0 +1,126 @@
+{
+  "source_project": "ai-passport-teenieping",
+  "source_manifest_sha256": "de4196cf401d30d30007daac9c5636b18d51b61c164e84ad9f7ceb0d4efd8671",
+  "characters": [
+    {
+      "id": "heartsping",
+      "name": "爱心萌可"
+    },
+    {
+      "id": "shimmerping",
+      "name": "银光萌可"
+    },
+    {
+      "id": "sparkleping",
+      "name": "星光萌可"
+    },
+    {
+      "id": "twinkleping",
+      "name": "月光萌可"
+    },
+    {
+      "id": "auroraping",
+      "name": "极光萌可"
+    },
+    {
+      "id": "princeping",
+      "name": "王子萌可"
+    },
+    {
+      "id": "ellaping",
+      "name": "缤缤萌可"
+    },
+    {
+      "id": "bellaping",
+      "name": "纷纷萌可"
+    },
+    {
+      "id": "togetherping",
+      "name": "共共萌可"
+    },
+    {
+      "id": "mightyping",
+      "name": "熊熊萌可"
+    },
+    {
+      "id": "giverping",
+      "name": "光明萌可"
+    },
+    {
+      "id": "dingdongping",
+      "name": "叮咚萌可"
+    },
+    {
+      "id": "hopping",
+      "name": "兔兔萌可"
+    },
+    {
+      "id": "petitping",
+      "name": "流浪萌可"
+    },
+    {
+      "id": "allureping",
+      "name": "狐狐萌可"
+    },
+    {
+      "id": "stickerping",
+      "name": "贴贴萌可"
+    },
+    {
+      "id": "lucyping",
+      "name": "透明萌可"
+    },
+    {
+      "id": "swayping",
+      "name": "跳舞萌可"
+    },
+    {
+      "id": "sneakyping",
+      "name": "悄悄萌可"
+    },
+    {
+      "id": "hulaping",
+      "name": "呼啦萌可"
+    },
+    {
+      "id": "snuggyping",
+      "name": "绵羊萌可"
+    },
+    {
+      "id": "dazzleping",
+      "name": "动动萌可"
+    },
+    {
+      "id": "kissyping",
+      "name": "亲亲萌可"
+    },
+    {
+      "id": "doremiping",
+      "name": "歌谣萌可"
+    },
+    {
+      "id": "charmping",
+      "name": "娇娇萌可"
+    },
+    {
+      "id": "balletping",
+      "name": "芭蕾萌可"
+    },
+    {
+      "id": "kikiping",
+      "name": "淘气萌可"
+    },
+    {
+      "id": "jellyping",
+      "name": "软软萌可"
+    },
+    {
+      "id": "shashaping",
+      "name": "闪闪萌可"
+    },
+    {
+      "id": "fluffyping",
+      "name": "绵绵萌可"
+    }
+  ]
+}

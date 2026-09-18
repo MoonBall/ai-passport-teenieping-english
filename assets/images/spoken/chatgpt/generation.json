@@ -1,0 +1,121 @@
+{
+  "source": "ChatGPT Create image",
+  "date": "2026-09-18",
+  "visual_style": "Accurate original Teenieping characters, friendly detailed 3D rendering, cream background, soft light, no text or watermark",
+  "layout": "Four-by-four equal panels per group of four scenes; final scene uses a two-by-two storyboard",
+  "frames_per_card": 4,
+  "frame_ms": 1000,
+  "sheets": [
+    {
+      "file": "group-1.png",
+      "reference": "characters/reference-1.png",
+      "cards": [
+        "name",
+        "feeling",
+        "age",
+        "listen"
+      ],
+      "characters": [
+        "heartsping",
+        "shimmerping",
+        "sparkleping",
+        "twinkleping"
+      ],
+      "source": "ChatGPT Create image",
+      "accepted": true,
+      "sha256": "b12ddb0928051d3186c3bfd0e803f67e5ec3ee05281b54886aebb74f3c43a71c",
+      "dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "file": "group-2.png",
+      "reference": "characters/reference-2.png",
+      "cards": [
+        "repeat",
+        "draw",
+        "try",
+        "color"
+      ],
+      "characters": [
+        "auroraping",
+        "princeping",
+        "ellaping",
+        "bellaping"
+      ],
+      "source": "ChatGPT Create image",
+      "accepted": true,
+      "sha256": "78b77f8ba398806c8239ccfe860cb5327f9b5e451dca11147cdd5d38a9108845",
+      "dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "file": "group-3.png",
+      "reference": "characters/reference-3.png",
+      "cards": [
+        "dont-know",
+        "again",
+        "slow",
+        "type"
+      ],
+      "characters": [
+        "togetherping",
+        "mightyping",
+        "giverping",
+        "dingdongping"
+      ],
+      "source": "ChatGPT Create image",
+      "accepted": true,
+      "sha256": "8e81468e95fec4df5f8ae3bc28db72f9c9549ed98098e36d80f71e6593012f7f",
+      "dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "file": "group-4.png",
+      "reference": "characters/reference-4.png",
+      "cards": [
+        "hear-see",
+        "connection",
+        "praise",
+        "high-five"
+      ],
+      "characters": [
+        "hopping",
+        "petitping",
+        "allureping",
+        "stickerping"
+      ],
+      "source": "ChatGPT Create image",
+      "accepted": true,
+      "sha256": "635b5c3e6602006b91f5371d4b759b38538e015bb14a8eec98a7d72252e299cf",
+      "dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "file": "group-5.png",
+      "reference": "characters/reference-5.png",
+      "cards": [
+        "goodbye"
+      ],
+      "characters": [
+        "lucyping"
+      ],
+      "source": "ChatGPT Create image",
+      "accepted": true,
+      "sha256": "5f817b9b05fa0c74b9a893f4895260e6ddb65007107b2ef4ff566cffec620ba5",
+      "dimensions": [
+        1448,
+        1086
+      ]
+    }
+  ],
+  "total_cards": 17,
+  "total_keyframes": 68
+}

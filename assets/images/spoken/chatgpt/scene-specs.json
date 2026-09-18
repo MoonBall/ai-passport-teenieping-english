@@ -1,0 +1,138 @@
+[
+  {
+    "order": 1,
+    "character_id": "heartsping",
+    "character_name": "爱心萌可",
+    "command": "What's your name?",
+    "action": "指向对方询问，再指向自己胸前做自我介绍。",
+    "reference": "characters/heartsping.webp"
+  },
+  {
+    "order": 2,
+    "character_id": "shimmerping",
+    "character_name": "银光萌可",
+    "command": "How are you?",
+    "action": "轻轻点头，双手贴胸表达开心，给出大拇指。",
+    "reference": "characters/shimmerping.webp"
+  },
+  {
+    "order": 3,
+    "character_id": "sparkleping",
+    "character_name": "星光萌可",
+    "command": "How old are you?",
+    "action": "指向自己，再张开一只手的五根手指表示五岁；回答时换成自己的年龄。",
+    "reference": "characters/sparkleping.webp"
+  },
+  {
+    "order": 4,
+    "character_id": "twinkleping",
+    "character_name": "月光萌可",
+    "command": "Listen. / Look at me.",
+    "action": "先把手放到耳旁示意听，再指眼睛并指向自己示意看这里。",
+    "reference": "characters/twinkleping.webp"
+  },
+  {
+    "order": 5,
+    "character_id": "auroraping",
+    "character_name": "极光萌可",
+    "command": "Read after me.",
+    "action": "指向嘴巴做朗读动作，再伸手邀请对方跟读，拢耳倾听，最后点头鼓励。",
+    "reference": "characters/auroraping.webp"
+  },
+  {
+    "order": 6,
+    "character_id": "princeping",
+    "character_name": "王子萌可",
+    "command": "Circle. / Draw a line.",
+    "action": "在纸上的苹果周围画圆圈，再在小球下面画一条横线，最后展示结果。",
+    "reference": "characters/princeping.webp"
+  },
+  {
+    "order": 7,
+    "character_id": "ellaping",
+    "character_name": "缤缤萌可",
+    "command": "Can you try?",
+    "action": "看向三块彩色积木，握拳加油，认真搭好积木，开心举手。",
+    "reference": "characters/ellaping.webp"
+  },
+  {
+    "order": 8,
+    "character_id": "bellaping",
+    "character_name": "纷纷萌可",
+    "command": "What color is it?",
+    "action": "举起一颗红球，指向红球示意观察颜色。",
+    "reference": "characters/bellaping.webp"
+  },
+  {
+    "order": 9,
+    "character_id": "togetherping",
+    "character_name": "共共萌可",
+    "command": "I don't know.",
+    "action": "双手摊开，轻轻耸肩并摇头，表现困惑。",
+    "reference": "characters/togetherping.webp"
+  },
+  {
+    "order": 10,
+    "character_id": "mightyping",
+    "character_name": "熊熊萌可",
+    "command": "Can you say that again?",
+    "action": "手放耳旁表示没听清，摊手礼貌请求，再拢耳等待重复，最后点头。",
+    "reference": "characters/mightyping.webp"
+  },
+  {
+    "order": 11,
+    "character_id": "giverping",
+    "character_name": "光明萌可",
+    "command": "Slow down, please.",
+    "action": "双手掌心向下缓慢下压两次，示意放慢速度。",
+    "reference": "characters/giverping.webp"
+  },
+  {
+    "order": 12,
+    "character_id": "dingdongping",
+    "character_name": "叮咚萌可",
+    "command": "Can you type it?",
+    "action": "指向笔记本电脑，再双手在键盘上清楚地打字。",
+    "reference": "characters/dingdongping.webp"
+  },
+  {
+    "order": 13,
+    "character_id": "hopping",
+    "character_name": "兔兔萌可",
+    "command": "Can you hear / see me?",
+    "action": "在电脑前先指耳朵，再指眼睛，点头确认连接正常。",
+    "reference": "characters/hopping.webp"
+  },
+  {
+    "order": 14,
+    "character_id": "petitping",
+    "character_name": "流浪萌可",
+    "command": "The line is not OK!",
+    "action": "面对卡住的电脑画面摊手，指向断开的网络图标。",
+    "reference": "characters/petitping.webp"
+  },
+  {
+    "order": 15,
+    "character_id": "allureping",
+    "character_name": "狐狐萌可",
+    "command": "Good job! / Well done!",
+    "action": "面向观众伸出大拇指，再轻轻鼓掌表示表扬。",
+    "reference": "characters/allureping.webp"
+  },
+  {
+    "order": 16,
+    "character_id": "stickerping",
+    "character_name": "贴贴萌可",
+    "command": "High five!",
+    "action": "举起张开的右手，掌心正对观众，温柔地朝镜头伸手隔空击掌，再收回。",
+    "reference": "characters/stickerping.webp"
+  },
+  {
+    "order": 17,
+    "character_id": "lucyping",
+    "character_name": "透明萌可",
+    "command": "See you next time!",
+    "action": "面向观众缓慢挥手告别，最后轻轻点头。",
+    "reference": "characters/lucyping.webp"
+  }
+]
