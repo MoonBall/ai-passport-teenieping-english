@@ -1,8 +1,8 @@
 {
   "title_zh": "萌可英语磨耳朵",
   "title_en": "Teenieping Classroom English",
-  "description_zh": "收录小朋友上网课时老师常用的 17 个英语表达，搭配不同萌可角色和动作图片，随时听一听、轻松磨耳朵。适合喜欢萌可的小朋友，尤其是女孩子。",
-  "description_en": "Listen and learn with 17 English expressions commonly used by teachers in online classes, each featuring a different Teenieping character and action pictures. A playful listening companion for young Teenieping fans, especially girls.",
+  "description_zh": "收录小朋友上网课时老师常用的 17 个英语表达，搭配不同萌可角色和动作图片，随时听一听、轻松磨耳朵。适合喜欢萌可的小朋友。",
+  "description_en": "Listen and learn with 17 English expressions commonly used by teachers in online classes, each featuring a different Teenieping character and action pictures. A playful listening companion for young Teenieping fans.",
   "category": "learning",
   "source_url": "https://github.com/MoonBall/ai-passport-teenieping-english",
   "instructions_zh": "安装后开机即可使用，无需联网或配网。\n\n1. 上键／下键：切换 17 张英语卡片，首尾循环；翻卡会停止当前播放。\n2. 短按播放／确定键：朗读当前英语指令，并播放对应萌可的动作图片；再次短按可停止。\n3. 长按播放／确定键：从头播放完整中英讲解，包括场景、英语指令及意思、期望回答或动作、适用情境。\n4. 开机和翻卡不会自动发声；听完一遍后不会自动循环，可再次按键重听。\n5. 闲置一分钟后屏幕会变暗，按键恢复亮度。\n\n第一次使用可停在爱心萌可卡片，短按听“What’s your name?”，再长按了解提问含义和回答方法。姓名与年龄是示范，跟读时请换成孩子自己的信息。\n\n封面为 AI 生成的主题插画，卡片动作由四张图片顺序呈现。",
@@ -12,5 +12,7 @@
   "cover_kind": "AI-generated illustration",
   "cover_width": 1086,
   "cover_height": 1448,
-  "cover_sha256": "06530127f317b1401b31238c5c293cbcac73bf02edabe38a4a13d2c4e12c40e0"
+  "cover_sha256": "06530127f317b1401b31238c5c293cbcac73bf02edabe38a4a13d2c4e12c40e0",
+  "changelog_zh": "优化中英文简介。",
+  "changelog_en": "Refine the Chinese and English descriptions."
 }
